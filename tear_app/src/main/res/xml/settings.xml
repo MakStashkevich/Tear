@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_user"
+        android:key="sett_user_category">
+
+        <ListPreference
+            android:key="sett_user_list"
+            android:title="Категория расписания"
+            android:summary="Укажите категорию отображения расписания, которая вам нужна"
+            android:entries="@array/settings_list"
+            android:entryValues="@array/settings_listAlias"
+            android:defaultValue="group" />
+
+        <EditTextPreference
+            android:key="sett_user_text"
+            android:title="@string/title_group"
+            android:summary="@string/summary_group"
+            android:dialogTitle="@string/title_group">
+
+        </EditTextPreference>
+
+        <SwitchPreference
+            android:key="sett_user_zaoch"
+            android:title="Заочное обучение"
+            android:summary="Если вы учитесь заочно, отметьте данный пункт">
+
+        </SwitchPreference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_notification"
+        android:key="sett_notification_category">
+
+        <SwitchPreference
+            android:key="sett_notification"
+            android:title="Уведомления о занятиях"
+            android:summary="Вас будет уведомлять о предстоящих занятиях за указанное время до их начала"
+            android:defaultValue="false" />
+
+        <!--<ListPreference
+            android:dependency="sett_notification_update"
+            android:key="sett_notification_time"
+            android:title="Время получения уведомлений"
+            android:dialogTitle="Время получения"
+            android:entries="@array/settings_list_group"
+            android:entryValues="@array/settings_list_group"
+            android:defaultValue="1 час" />-->
+
+        <SwitchPreference
+            android:key="sett_notification_morning"
+            android:title="Напоминалка"
+            android:summary="Вам будут приходить напоминания проверить расписание каждый будний день в указанное время"
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="sett_notification_update_morning"
+            android:dependency="sett_notification_morning"
+            android:title="Время получения уведомлений"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_tear">
+
+        <Preference
+            android:key="sett_tear_contacts"
+            android:title="Контакты и ссылки"
+            android:summary="Ссылки на разработчика, группу и прочие">
+
+        </Preference>
+
+        <Preference
+            android:key="sett_tear_voice"
+            android:title="Поставить оценку"
+            android:summary="Оцените приложение и напишите в комментариях свои пожелания">
+
+        </Preference>
+
+        <Preference
+            android:key="sett_tear_app"
+            android:selectable="false"
+            android:persistent="false"
+            android:title="О приложении">
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

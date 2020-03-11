@@ -1,0 +1,53 @@
+<resources>
+    <!-- APP DATA -->
+    <string name="app_name">Tear</string>
+    <string name="search">Поиск</string>
+    <string name="settings">Настройки</string>
+    <string name="star_off">Добавить в закладки</string>
+    <string name="star_on">Убрать из закладок</string>
+    <string name="contacts">Контакты</string>
+    <string name="name_main">Расписание</string>
+    <string name="site">Сайт колледжа</string>
+    <string name="back">Назад</string>
+    <string name="noitems">Нет занятий</string>
+
+    <!-- ACTIONS -->
+    <string name="action_teacher">Расписание преподователя</string>
+    <string name="action_group">Расписание группы</string>
+    <string name="action_cabinet">Расписание по кабинету</string>
+
+    <!-- SETTINGS -->
+    <string name="settings_developer">Разработчик</string>
+    <string name="settings_user">Персонализация</string>
+    <string name="settings_notification">Уведомления</string>
+    <string name="settings_tear">Дополнительно</string>
+    <string name="hour">7</string>
+    <string name="min">0</string>
+    <string-array name="settings_list_group">
+        <item>2 часа</item>
+        <item>1 час</item>
+        <item>30 минут</item>
+    </string-array>
+
+    <string-array name="settings_list">
+        <item>Группа</item>
+        <item>Преподаватель</item>
+        <item>Кабинет</item>
+    </string-array>
+
+    <string-array name="settings_listAlias">
+        <item>group</item>
+        <item>teach</item>
+        <item>cabinet</item>
+    </string-array>
+
+    <string name="title_group">Номер группы</string>
+    <string name="summary_group">Укажите трехзначный номер своей группы</string>
+    <string name="title_teach">Фамилия преподавателя</string>
+    <string name="summary_teach">Укажите полную фамилию, без лишних символов</string>
+    <string name="title_cabinet">Номер кабинета</string>
+    <string name="summary_cabinet">Укажите номер кабинета</string>
+
+    <!-- LINKS -->
+    <string name="developer_link">@makstashkevich</string>
+</resources>

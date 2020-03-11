@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme for API 23 with black navigation and white status bar -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- API 23 -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <!-- Make scrim effect cover the status bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

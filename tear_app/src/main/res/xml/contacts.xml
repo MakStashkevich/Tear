@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Основное">
+
+        <Preference
+            android:key="dev"
+            android:title="MakStashkevich"
+            android:summary="Разработчик этого приложения">
+        </Preference>
+
+        <Preference
+            android:key="helper"
+            android:title="Благодарности"
+            android:summary="Огромное спасибо этим людям за помощь в тестировании, предложений своих идей для функционала приложения и его дизайна">
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Вконтакте">
+
+        <Preference
+            android:title="Группа вконтакте"
+            android:summary="Новости, обновления и прочее..">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://vk.com/tear_app">
+            </intent>
+
+        </Preference>
+
+        <Preference
+            android:title="Чат вконтакте"
+            android:summary="Общение, обсуждение ошибок и нововведений">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://vk.me/join/AJQ1d028sAcNo5mIc7zHCpJg">
+            </intent>
+
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
