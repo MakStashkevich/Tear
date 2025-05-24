@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.makstashkevich.tear">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- PERMISSIONS -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -23,18 +22,22 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <activity
             android:name=".activity.StartScreenActivity"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/name_main">
+            android:label="@string/name_main"
+            android:exported="true">
             <intent-filter>
                 <!-- google search -->
                 <action android:name="android.intent.action.VIEW" />
@@ -45,19 +48,28 @@
                     android:scheme="android-app-google-plus-demo" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.SettingsActivity"
-            android:label="@string/settings"/>
+            android:label="@string/settings"
+            android:exported="false" />
+
         <activity
             android:name=".activity.ContactsActivity"
-            android:label="@string/contacts"/>
+            android:label="@string/contacts"
+            android:exported="false" />
 
-        <receiver android:name=".receivers.DeviceBootReceiver">
+        <receiver
+            android:name=".receivers.DeviceBootReceiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receivers.AlarmReceiver" />
+
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

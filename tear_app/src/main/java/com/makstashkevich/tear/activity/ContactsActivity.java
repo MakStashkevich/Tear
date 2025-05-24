@@ -113,14 +113,16 @@ public class ContactsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-            case R.id.action_back:
-                onBackPressed();
-                return true;
+        int itemId = item.getItemId();
+
+        if (itemId == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        } else if (itemId == R.id.action_back) {
+            onBackPressed();
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 

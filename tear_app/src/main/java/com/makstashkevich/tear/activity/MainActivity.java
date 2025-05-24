@@ -168,26 +168,32 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-            case R.id.action_settings:
-                startActivityForResult(new Intent(this, SettingsActivity.class), REQUEST_SETTINGS);
-                return true;
-            case R.id.action_search:
-                return true;
-            /*case R.id.action_star:
-                int icon = R.drawable.ic_star_off;
-                String text = getString(R.string.star_off);
-                if(item.getIcon().getConstantState().equals(getResources().getDrawable(R.drawable.ic_star_off).getConstantState())){
-                    icon = R.drawable.ic_star_on;
-                    text = getString(R.string.star_on);
-                }
-                item.setIcon(icon);
-                item.setTitle(text);
-                return true;*/
+        int itemId = item.getItemId();
+
+        if (itemId == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        } else if (itemId == R.id.action_settings) {
+            startActivityForResult(new Intent(this, SettingsActivity.class), REQUEST_SETTINGS);
+            return true;
+        } else if (itemId == R.id.action_search) {
+            return true;
         }
+//        else if (itemId == R.id.action_star) {
+//            int icon = R.drawable.ic_star_off;
+//            String text = getString(R.string.star_off);
+//
+//            if (item.getIcon().getConstantState().equals(
+//                    getResources().getDrawable(R.drawable.ic_star_off).getConstantState())) {
+//                icon = R.drawable.ic_star_on;
+//                text = getString(R.string.star_on);
+//            }
+//
+//            item.setIcon(icon);
+//            item.setTitle(text);
+//            return true;
+//        }
+
         return super.onOptionsItemSelected(item);
     }
 

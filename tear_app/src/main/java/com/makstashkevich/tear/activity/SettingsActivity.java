@@ -252,22 +252,24 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
-            case R.id.action_site:
-                try {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://college-ripo.by")));
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(this, "Для открытия сайта, установите браузер на свое устройство!", Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-                }
-                return true;
-            case R.id.action_back:
-                onBackPressed();
-                return true;
+        int itemId = item.getItemId();
+
+        if (itemId == android.R.id.home) {
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
+        } else if (itemId == R.id.action_site) {
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://college-ripo.by")));
+            } catch (ActivityNotFoundException e) {
+                Toast.makeText(this, "Для открытия сайта, установите браузер на свое устройство!", Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
+            return true;
+        } else if (itemId == R.id.action_back) {
+            onBackPressed();
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 

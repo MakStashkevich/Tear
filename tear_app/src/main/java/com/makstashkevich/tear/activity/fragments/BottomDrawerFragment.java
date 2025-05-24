@@ -33,10 +33,10 @@ public class BottomDrawerFragment extends BottomSheetDialogFragment {
         initializeAction(1, menu.findItem(R.id.action_bottom_one), sharedPref, main);
         initializeAction(2, menu.findItem(R.id.action_bottom_two), sharedPref, main);
 
-        getDialog().setOnShowListener(dialog -> {
-            View bottomSheetInternal = getDialog().findViewById(R.id.design_bottom_sheet);
-            BottomSheetBehavior.from(bottomSheetInternal).setState(BottomSheetBehavior.STATE_EXPANDED);
-        });
+//        getDialog().setOnShowListener(dialog -> {
+//            View bottomSheetInternal = getDialog().findViewById(R.id.design_bottom_sheet);
+//            BottomSheetBehavior.from(bottomSheetInternal).setState(BottomSheetBehavior.STATE_EXPANDED);
+//        });
         return view;
     }
 
